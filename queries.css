@@ -7,9 +7,6 @@
     row-gap: 3rem;
   }
 
-  .container {
-  }
-
   .container-profile {
     height: 35rem;
     flex-direction: column;
@@ -46,7 +43,7 @@
   }
 
   .plan-container:hover {
-    background-color: var(#fff);
+    background-color: var(--Desaturated-blue);
     cursor: pointer;
   }
 
@@ -59,11 +56,6 @@
 
   .hours {
     font-size: 3.2rem;
-  }
-
-  .exercise {
-    grid-row: 2/-1;
-    grid-column: 2/3;
   }
 
   .inner-box-one,
