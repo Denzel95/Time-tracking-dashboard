@@ -1,9 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
 :root {
+  /* Primary */
   --Blue: hsl(246, 80%, 60%);
-  --Light-red: hsl(15, 100%, 70%);
+  --Light-red-work: hsl(15, 100%, 70%);
   --Soft-blue: hsl(195, 74%, 62%);
-  --Light-red: hsl(348, 100%, 68%);
+  --Light-red-study: hsl(348, 100%, 68%);
   --Lime-green: hsl(145, 58%, 55%);
   --Violet: hsl(264, 64%, 52%);
   --Soft-orange: hsl(43, 84%, 65%);
+
+  /* Neutral */
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  font-size: 1.8rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--Very-dark-blue);
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 32rem;
+  grid-template-rows: 19rem 13rem 13rem 13rem 13rem 13rem 13rem;
+  gap: 4.8rem;
+  margin: 10rem 0;
+}
+
+.report-box {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.container-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  background-color: var(--Blue);
+  padding: 2.4rem 2.4rem 2rem;
+  z-index: 1;
+  border-radius: 2rem;
+  height: 13rem;
+}
+
+.profile-img {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.report-text {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.profile-heading {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.buttons {
+  background-color: var(--Dark-blue);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  padding-top: 3rem;
+  height: 10rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  /* color: #fff; */
+}
+
+.btn-daily,
+.btn-monthly {
+  color: var(--Blue);
+}
+
+.btn-weekly {
+  color: #fff;
+}
+
+.btn:hover {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.container {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.hours-box,
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-container {
+  width: 100%;
+  height: 12rem;
+  padding: 2.4rem 2rem;
+  background-color: var(--Dark-blue);
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  transform: translate(0%, 30%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.plan-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.hours {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.week-hours {
+  font-size: 1rem;
+  color: var(--Desaturated-blue);
+}
+
+.inner {
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  background-repeat: no-repeat;
+  background-position: 90% -1rem;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.inner-box-one {
+  background: var(--Light-red-work) url("./images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: 90% -1rem;
+}
+
+.inner-box-two {
+  background: var(--Soft-blue) url("./images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: 90% -1rem;
+}
+
+.inner-box-three {
+  background: var(--Light-red-study) url("./images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: 90% -1rem;
+}
+
+.inner-box-four {
+  background: var(--Lime-green) url("./images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: 90% -1rem;
+}
+
+.inner-box-five {
+  background: var(--Violet) url("./images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: 90% -1rem;
+}
+
+.inner-box-six {
+  background: var(--Soft-orange) url("./images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: 90% -1rem;
 }
